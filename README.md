@@ -41,6 +41,7 @@ print:
 
 input num as string
 return num to main
+```
 
 ### humanGuesser()
 ```
@@ -50,6 +51,7 @@ Say if it too high, too low, or correct
 ```
 
 ### computerGuesser()
+```
 gives a computer "guess"
 gets user input, if the computer is too low, too high, or correct
 
@@ -63,4 +65,4 @@ while(keepGoing):
 		maax = gess
 	else:
 		keepGoing = false
-
+```
