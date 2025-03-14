@@ -35,7 +35,7 @@ public class NumGuess {
 		Random random = new Random();
 		Scanner input = new Scanner(System.in);
 		int correct = random.nextInt(100);
-		System.out.println(correct);
+		//System.out.println(correct);
 
 		boolean keepGoing = true;
 		int i = 0;
@@ -57,6 +57,16 @@ public class NumGuess {
 				keepGoing = false;
 			} // End elif statement
 		} // End while loop
+
+		if (i > 7) {
+			System.out.println("You lose. You should be able to get it in 7 guesses or less. :( ");
+		} else if (i < 7) {
+			System.out.println("You win. You got it in less than 7 guesses. :) ");
+		} else {
+			System.out.println("Tie. You got it in exactly 7 guesses. -_- ");
+		} // End elif statements
+
+		System.out.println("");
 	} // End humanGuesser
 
 	public static void computerGuesser() {
@@ -75,7 +85,7 @@ public class NumGuess {
 			boolean keepGoing2 = true;
 				
 			while (keepGoing2) {
-				System.out.println("Too (H)igh, Too (L)ow, (C)orrect: ");
+				System.out.print("Too (H)igh, Too (L)ow, (C)orrect: ");
 				String answer = input.nextLine();
 				answer = answer.toLowerCase();
 
@@ -95,5 +105,14 @@ public class NumGuess {
 				} // End elif statements
 			} // End nested while loop		
 		} // End while loop
+
+		if (i > 7) {
+			System.out.println("This shouldn't happen, but the computer got it in less than 7 guesses. Computer loses. :( ");
+		} else if (i < 7) {
+			System.out.println("The computer wins. It got it in less than 7 tries. :) ");
+		} else {
+			System.out.println("Tie. The computer got it in exactly 7 guesses. -_- ");
+		} // End elif statements
+		System.out.println("");
 	} // End computerGuesser()
-} // End class
+} // End NumGuess class
